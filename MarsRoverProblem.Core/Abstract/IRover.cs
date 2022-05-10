@@ -10,10 +10,10 @@ namespace MarsRoverProblem.Abstract
 {
     public interface IRover
     {
-        Plateau plateau { get; set; }
+        Plateau Plateau { get; set; }
 
-        Coordinates coordinates { get; set; }
+        Coordinates Coordinates { get; set; }
 
-        Directions heading { get; set; }
+        string[] NasaCode { get; set; }
     }
 }

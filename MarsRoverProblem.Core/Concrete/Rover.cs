@@ -15,17 +15,35 @@ namespace MarsRoverProblem.Concrete
     {
         private Plateau plateau;
         private Coordinates coordinates;
-        private Directions direction = Directions.N;
+        private string[] nasaCode;
 
-        public Rover(Plateau plateau, Coordinates coordinates, Directions direction)
+        public Rover(Plateau plateau, Coordinates coordinates, string[] nasaCode)
         {
             this.plateau = plateau;
             this.coordinates = coordinates;
-            this.direction = direction;
+            this.nasaCode = nasaCode;
         }
 
-        public Directions heading { get; set; }
-        Plateau IRover.plateau { get; set; }
-        Coordinates IRover.coordinates { get; set; }
+        public Plateau Plateau
+        {
+            get { return this.plateau; }
+
+            set { this.plateau = value; }
+        }
+
+        public Coordinates Coordinates
+        {
+            get { return this.coordinates; }
+
+            set { this.coordinates = value; }
+        }
+
+        public string[] NasaCode
+        {
+            get { return this.nasaCode; }
+
+            set { this.nasaCode = value; }
+        }
+
     }
 }
